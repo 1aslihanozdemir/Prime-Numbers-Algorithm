@@ -1,0 +1,23 @@
+sinir = int(input("Kaç sayısına kadar asal sayıları bulsun? "))
+asal_sayilar = []
+count = 0
+for j in range(1,sinir):
+    if j == 1:
+        pass
+    elif j == 2:
+        asal_sayilar.append(j)
+        count+=1
+        print(2)
+    else:
+        asalMi=True
+        for i in range(2,j):
+            if j%i == 0:
+                asalMi = False
+                break
+        if asalMi == True:
+            count+=1
+            asal_sayilar.append(j)
+            print(j)
+
+print("Asal sayılar listesi:" , asal_sayilar)
+print("1-",sinir," arasında",count,"tane asal sayı vardır")
